@@ -1,5 +1,6 @@
 FROM ruby:2.7.1
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN apt-get update -qq && apt-get install -y nodejs npm postgresql-client
+RUN npm i -g yarn
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile ./Gemfile
